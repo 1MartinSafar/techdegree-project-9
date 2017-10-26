@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ======================================================================
+                        HEADER
+========================================================================= */
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  background-color: #615fd0;
+}
+
+h1 {
+  font-weight: 400;
+  color: white;
+}
+
+.app-name {
+  font-size: 1.5em;
+  margin-right: auto;
+  margin-left: 0.5em;
+}
+
+.highlight {
+  font-weight: bold;
+  color: white;
+}
+
+.tm {
+  /*font-size: 0.5em;
+  padding-bottom: 1.5em;*/
+}
+
+#svg-bell {
+  align-self: center;
+}
+
+.user-div {
+  align-self: center;
+
+  border-left: 2px solid white;
+  border-left: 2px solid #464499;
+
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-right: 0.75em;
+}
+
+.user-picture {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+
+  /*margin-right: 0.75em;*/
+}
+
+.username {
+  color: white;
+  font-weight: 400;
+  margin-right: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
