@@ -132,65 +132,40 @@ main, nav {
 main {
   width: 100%;
   align-self: stretch;
+  align-items: flex-start;
 
   margin: 0;
 }
 
-.alert-div {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  opacity: 0.85;
-}
-
-.alert {
+.alert-highlight {
   font-weight: bold;
-  margin-right: 0.5em;
   margin-right: 0.75em;
 }
 
-.alert-text {
+.alert {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   font-size: 0.9em;
-  display: inline-flex;
+  opacity: 0.85;
   color: white;
   background-color: #615fd0;
   border-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 
   padding: 0.75em;
   margin: 0.5em;
-  margin-right: 0;
 }
+
 .alert-close {
-  color: white;
-  background-color: #615fd0;
-  display: inline-flex;
-  font-size: 0.9em;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
 
-  padding: 0.75em;
-  margin-top: 0.5em;
-  margin-left: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0;
-
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  padding-left: 0.25em;
+  margin-left: auto;
 }
 
-/*.alert-div p::after {
-  content: "X";
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  right: 0%;
-
-  align-self: center;
-  margin-left: auto;
-}*/
 
 /* ======================================================================
                         SVG STYLES
@@ -220,7 +195,7 @@ svg {
     margin-right: 1em;
   }
 
-  .alert-text {
+  /*.alert-text {
     margin: 1.5em;
     margin-right: 0;
   }
@@ -229,6 +204,10 @@ svg {
     margin-left: 0;
     margin-right: 1.5em;
     margin-bottom: 0;
+  }*/
+
+  .alert {
+    margin: 1.5em;
   }
 }
 
