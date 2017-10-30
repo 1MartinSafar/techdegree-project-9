@@ -56,23 +56,39 @@ var ctx = document.querySelector("#traffic");
 var traffic = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
       label: 'traffic',
       // backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
       // borderJoinStyle: "round",
       // cubicInterpolationMode: false,
+      lineTension: 0,
+      // borderCapStyle: "square",
+      // borderJoinStyle:
+      // showLine: false,
+      pointRadius: 7.5,
+      pointBorderWidth: 2.5,
+      pointBackgroundColor: "white",
+      pointBorderColor: "#615fd0",
+      borderColor: "rgba(97, 95, 208, 0.6)",
+      backgroundColor: "rgba(97, 95, 208, 0.2)",
       // THESE ARE THE POINTS
       data: [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+    //   data: {
+    //     [1 500]
+    //   }
     }]
   },
   options: {
     maintainAspectRatio: false,
     scales: {
       yAxes: [{
-        stacked: true,
         ticks: {
+          min: 0,
+          max: 2500,
+          // stepSize: 500
+          // min: 0
           beginAtZero:true
           // stepSize: 500
 
@@ -82,7 +98,8 @@ var traffic = new Chart(ctx, {
           // scaleSteps: 500
           // scaleStepWidth : 500,
           // scaleStartValue : 500
-        }
+        },
+        stacked: true,
       }]
     }
   }
