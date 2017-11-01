@@ -221,6 +221,64 @@ main {
   width: calc(100% - 2em);
 }
 
+.dm-container {
+  display: flex;
+  flex-direction: row;
+  /*width: calc(100% - 2em);*/
+  width: 100%;
+
+  height: 80vh;
+  height: 20em;
+
+  /*padding: 2em;*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /*padding-left: 2em;*/
+  /*padding-right: 2em;*/
+  /*align-self: stretch;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*padding-bottom: 2em;*/
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.daily-container {
+  /*justify-content: flex-start;*/
+  width: 45%;
+  /*width: 50%;*/
+  /*width: 40%;*/
+  /*padding-left: 2em;*/
+  /*padding-right: 2em;*/
+  /*width: 20%;*/
+  border-right: 1px solid black;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+#daily {
+  /*width: 100%;*/
+  /*width: 400px;*/
+}
+.mobile-container {
+  /*justify-content: flex-end;*/
+  width: 45%;
+  /*width: 50%;*/
+  /*width: 40%;*/
+  /*padding-left: 2em;*/
+  padding-top: 1em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
+#mobile {
+
+}
+
+.chartjs-render-monitor {
+  /*width: 450;*/
+}
+
+
 /* ======================================================================
                         SVG STYLES
 ========================================================================= */
