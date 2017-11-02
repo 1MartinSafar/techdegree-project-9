@@ -356,7 +356,8 @@ svg path {
 
   width: 50%;
 }
-.members-container h3 {
+.members-container h3,
+.message-container h3 {
   margin-top: 1.5em;
   margin-left: 2em;
 }
@@ -366,7 +367,8 @@ svg path {
 
   width: 50%;
 }
-.activity-container h3 {
+.activity-container h3,
+.settings-container h3 {
   margin-top: 1.5em;
   margin-left: 2em;
   margin-right: 2em;
@@ -400,7 +402,7 @@ svg path {
 }
 .member a {
   color: #615fd0;
-  font-size: 0.8em;
+  font-size: 0.85em;
   text-decoration: none;
 }
 .member a,
@@ -413,13 +415,234 @@ svg path {
   margin-top: 0.5em;
 }
 .member {
-  /*position: relative;*/
   height: 56px;
 }
 .arrow {
+  color: #615fd0;
   align-self: flex-end;
   font-size: 2.5em;
 }
+
+/* ======================================================================
+                        MESSAGE USER AND SETTINGS
+========================================================================= */
+
+.message-settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3em;
+}
+#settings-h {
+  margin-bottom: 1.5em;
+  margin-left: 1.75em;
+}
+.message-container {
+  width: calc(50% - 2em);
+  border-right: 1px solid black;
+  padding-right: 2.5em;
+
+  width: 50%;
+}
+/* MESSAGE SEARCH BAR */
+#user-search {
+  width: 100%;
+  margin: 1em;
+  margin-left: 2.3em;
+}
+#userSearch {
+  font-size: 1em;
+
+  width: 100%;
+  max-width: 33.188em;
+  height: 2.6em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: 2px solid lightgray;
+
+  background-color: #f5f5f5;
+  padding: 1.5em 1em;
+  padding: 1em;
+  /*margin-right: 2.3em;*/
+}
+#userSearch:focus::placeholder {
+  visibility: hidden;
+}
+#message {
+  width: 100%;
+  margin: 1em;
+  margin-left: 2.3em;
+}
+#message-area {
+  width: 100%;
+  max-width: 33.188em;
+  height: 7.5em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: 2px solid lightgray;
+
+  background-color: #f5f5f5;
+  padding: 1em;
+  margin-right: 2.3em;
+}
+#message-area:focus::placeholder {
+  visibility: hidden;
+}
+/* SEND BUTTON */
+#send {
+  width: 100%;
+  height: 3.125em;
+  max-width: 33.188em;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+
+  border-radius: 5px;
+  outline: none;
+  border: none;
+
+  background-color: #615fd0;
+
+  padding: 1.5em 1em;
+  padding: 1em;
+  margin: 1em;
+  margin-left: 2.3em;
+  margin-bottom: 2.5em;
+}
+/* SETTINGS */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 2em);
+  padding-right: 2.5em;
+
+  width: 50%;
+}
+.settings-container div {
+  margin-left: 2em;
+}
+.settings-container div h3 {
+  margin: 0;
+  width: 12em;
+}
+.settings {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+/* TESTING OFF AND OFF BUTTONS */
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #615fd0; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+/* TIMEZONE DROPDOWN */
+
+.timezone-container {
+  width: 100%;
+  margin: 1em;
+  margin-left: 2.3em;
+}
+#timezone {
+  opacity: 0.5;
+  font-weight: bold;
+  font-size: 1em;
+  width: 100%;
+  max-width: 33.188em;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid lightgray;
+
+  background-color: #f5f5f5;
+  padding: 1.5em 1em;
+  padding: 1em;
+}
+
+/* SAVE AND CANCEL BUTTONS */
+
+.save-cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#save,
+#cancel {
+  width: 47%;
+  height: 3.125em;
+  max-width: 33.188em;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+
+  border-radius: 5px;
+  outline: none;
+  border: none;
+
+  background-color: #615fd0;
+
+  padding: 1.5em 1em;
+  padding: 1em;
+  margin-top: 0.5em;
+  /*margin-left: 2.3em;*/
+  /*margin-right: 1em;*/
+  margin-bottom: 2.5em;
+}
+#save {
+
+}
+#cancel {
+  background-color: #969696;
+}
+
+
 
 
 /* ======================================================================
@@ -491,26 +714,13 @@ svg {
     height: 80vh;
     height: 20em;
 
-    /*padding: 2em;*/
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    /*padding-left: 2em;*/
-    /*padding-right: 2em;*/
-    /*align-self: stretch;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*padding-bottom: 2em;*/
     margin-top: 2em;
     margin-bottom: 2em;
   }
   .daily-container {
-    /*justify-content: flex-start;*/
     width: 45%;
-    /*width: 50%;*/
-    /*width: 40%;*/
-    /*padding-left: 2em;*/
-    /*padding-right: 2em;*/
-    /*width: 20%;*/
     border-right: 1px solid black;
     padding-left: 2em;
     padding-right: 2em;
@@ -522,11 +732,7 @@ svg {
     /*width: 400px;*/
   }
   .mobile-container {
-    /*justify-content: flex-end;*/
     width: 45%;
-    /*width: 50%;*/
-    /*width: 40%;*/
-    /*padding-left: 2em;*/
     padding-top: 1em;
     padding-left: 0;
     padding-right: 2em;
@@ -534,10 +740,6 @@ svg {
   }
   #mobile {
 
-  }
-
-  .chartjs-render-monitor {
-    /*width: 450;*/
   }
 }
 

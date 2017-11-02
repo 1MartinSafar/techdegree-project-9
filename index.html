@@ -218,6 +218,78 @@
             </div>
           </div>
 
+          <!-- MESSAGE USER AND SETTINGS -->
+          <div class="message-settings">
+
+            <!-- MESSAGE USER -->
+            <div class="message-container">
+
+              <h3>MESSAGE USER</h3>
+
+              <div id="user-search">
+                <form action="scripts.js">
+                  <input type="search" placeholder="Search for User" id="userSearch">
+                </form>
+              </div>
+
+              <div id="message">
+                <textarea name="textarea" id="message-area" cols="30" rows="10" placeholder="Message for User"></textarea>
+              </div>
+
+              <button id="send" type="button" name="send">SEND</button>
+
+            </div>
+
+            <!-- SETTINGS -->
+            <div class="settings-container">
+
+              <h3 id="settings-h">SETTINGS</h3>
+
+              <div class="settings">
+                <h3>Send Email Notifications</h3>
+                <!-- ON/OFF -->
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                  <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="settings">
+                <h3>Set Profile to Public</h3>
+                <!-- ON/OFF -->
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                  <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- TIMEZONE DROPDOWN -->
+              <div class="timezone-container">
+                <select name="timezone" id="timezone">
+                  <option hidden id="select-placeholder">Select Timezone</option>
+                  <option value="1">Timezone 1</option>
+                  <option value="2">Timezone 2</option>
+                  <option value="3">Timezone 3</option>
+                  <option value="4">Timezone 4</option>
+                  <option value="5">Timezone 5</option>
+                </select>
+              </div>
+
+              <!-- SAVE AND CANCEL BUTTONS -->
+              <div class="save-cancel">
+                <button id="save" type="button" name="save">SAVE</button>
+                <button id="cancel" type="button" name="cancel">CANCEL</button>
+              </div>
+
+            </div>
+          </div>
+
         </main>
       </div>
 
