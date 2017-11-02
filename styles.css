@@ -301,10 +301,13 @@ svg {
     flex-direction: row;
     /*width: 100%;*/
   }
+  #dashboard-h {
+    display: flex;
+    height: 4.5em;
+  }
   #dashboard-h h3 {
     font-size: 1.5em;
-    /*margin: 0;*/
-    margin: 0;
+    margin: auto;
   }
   #dashboard-search {
     margin-left: auto;
