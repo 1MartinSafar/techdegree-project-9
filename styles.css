@@ -70,7 +70,6 @@ h1 {
   color: white;
   font-weight: 400;
   margin-right: 0;
-  /*margin-bottom: 0;*/
 }
 
 /* ======================================================================
@@ -78,19 +77,10 @@ h1 {
 ========================================================================= */
 
 .content nav {
-  /*width: 4.5em;*/
-  /*width: 4%;*/
-  /*width: 50%;*/
-}
-
-.content nav {
-  /*width: 7.5%;*/
-  /*min-width: 4.5em;*/
   width: 4.5em;
 }
 
 .nav-side {
-  /*width: 100%;*/
   width: 4.5em;
   display: flex;
   flex-direction: column;
@@ -265,6 +255,170 @@ main {
 
 .chartjs-render-monitor {
   /*width: 450;*/
+}
+
+/* ======================================================================
+                        SOCIAL STATS
+========================================================================= */
+
+.social-h {
+  margin-top: 0;
+  margin-left: 2em;
+}
+.social-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /*height: 7.5em;*/
+
+  /*justify-content: stretch;*/
+  /*align-items: stretch;*/
+  justify-content: space-between;
+  padding-bottom: 3em;
+  border-bottom: 1px solid black;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  background-color: #e6e6e6;
+  background-color: #f5f5f5;
+  width: 20%;
+  /*height: 100%;*/
+  /*height: 7.5em;*/
+  align-self: center;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 2em;
+
+  width: calc(33% - 2em);
+}
+.social:last-of-type {
+  margin-right: 2em;
+}
+.social-background {
+  width: 5.5em;
+  height: 5.5em;
+  /*width: 2em;*/
+  /*height: 2em;*/
+  padding: 1.5em;
+  border-radius: 50%;
+  background-color: #615fd0;
+
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+.social-background svg {
+  display: flex;
+  align-self: flex-start;
+}
+#twitter,
+#facebook,
+#google {
+  /*width: 40px;*/
+  /*height: 40px;*/
+}
+svg path {
+  /*width: 40px;*/
+  /*height: 40px;*/
+}
+.stats {
+  margin-left: 1.5em;
+  /*padding-bottom: 1em;*/
+}
+.stats h3 {
+  color: #615fd0;
+  margin: 0;
+}
+.stats span {
+  font-size: 3em;
+}
+
+/* ======================================================================
+                        NEW MEMBERS AND RECENT ACTIVITY
+========================================================================= */
+
+.members-activity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  border-bottom: 1px solid black;
+}
+.members-container {
+  width: calc(50% - 2em);
+  border-right: 1px solid black;
+  padding-right: 2.5em;
+
+  width: 50%;
+}
+.members-container h3 {
+  margin-top: 1.5em;
+  margin-left: 2em;
+}
+.activity-container {
+  width: calc(50% - 2em);
+  padding-right: 2.5em;
+
+  width: 50%;
+}
+.activity-container h3 {
+  margin-top: 1.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.member {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+
+  /*border-bottom: 1px solid black;*/
+}
+.member:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+.member-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.member div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5em;
+}
+.member h3 {
+  font-size: 0.9em;
+  margin: 0;
+}
+.member a {
+  color: #615fd0;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+.member a,
+.time {
+  margin-top: 0.2em;
+}
+.arrow,
+.join-date {
+  margin-left: auto;
+  margin-top: 0.5em;
+}
+.member {
+  /*position: relative;*/
+  height: 56px;
+}
+.arrow {
+  align-self: flex-end;
+  font-size: 2.5em;
 }
 
 
