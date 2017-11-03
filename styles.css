@@ -78,23 +78,27 @@ h1 {
 
 .content nav {
   width: 4.5em;
+
+  width: 2.5em;
 }
 
 .nav-side {
   width: 4.5em;
+  width: 2.5em;
   display: flex;
   flex-direction: column;
-
   text-align: center;
 
-  background-color: #615fd0;
-  background-color: #525181;
   background-color: #4e4d82;
   padding: 0;
   margin: 0;
-
   height: 100%;
 
+}
+
+.nav-side svg {
+  width: 20px;
+  height: 20px;
 }
 
 .nav-side li {
@@ -113,10 +117,11 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  width: calc(100% + 2em);
   text-align: center;
-
   background-color: #e6e6e6;
+
+  width: 100%;
 }
 #dashboard-h {
   padding: 0.5em;
@@ -125,26 +130,17 @@ h1 {
 #dashboard-h h3 {
   margin: 0;
   color: #575555;
-  /*padding: 0.5em;
-  background-color: white;*/
-  /*margin-bottom: 0.5em;*/
 }
 #dashboard-search {
-  /*margin-left: auto;*/
   margin: 1em;
 }
 #searchBar {
-  /*width: 20em;*/
   height: 2em;
   border-radius: 5px;
   outline: none;
   border: none;
   border: 2px solid lightgray;
-
   padding: 0.5em;
-}
-#searchBar::placeholder {
-  /*padding: 0.5em;*/
 }
 #searchBar:focus::placeholder {
   visibility: hidden;
@@ -162,16 +158,12 @@ main, nav {
 }
 
 main {
-  width: 100%;
   flex-direction: column;
   align-self: stretch;
   align-items: flex-start;
-
   margin: 0;
-
-
   /* NEW TEST */
-  width: calc(100% - 4.5em);
+  width: calc(100% - 2.5em);
 }
 
 .alert-highlight {
@@ -182,7 +174,6 @@ main {
 .alert {
   display: flex;
   flex-direction: row;
-  width: calc(100% - 2em);
   font-size: 0.9em;
   opacity: 0.85;
   color: white;
@@ -191,6 +182,8 @@ main {
 
   padding: 0.75em;
   margin: 1em;
+
+  width: calc(100% - 2em);
 }
 
 .alert-close {
@@ -208,26 +201,27 @@ main {
 ========================================================================= */
 
 .traffic-container {
-  position: relative;
-  margin: auto;
-  height: 80vh;
-  width: calc(100% - 2em);
+  /*position: relative;*/
+  /*margin: auto;*/
+  /*height: 80vh;*/
+  width: 100%;
+  height: 20em;
 
-  /*width: calc(100% - 1.8em);*/
+  padding-top: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
 }
 
 .dm-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /*height: 40em;*/
 
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin-top: 2em;
   margin-bottom: 2em;
-
-  /*align-items: stretch;*/
 }
 .daily-container {
   width: 100%;
@@ -237,10 +231,6 @@ main {
   padding-top: 1em;
   padding-bottom: 2em;
 }
-#daily {
-  /*width: 100%;*/
-  /*width: 400px;*/
-}
 .mobile-container {
   width: 100%;
   height: 20em;
@@ -249,85 +239,55 @@ main {
   padding-right: 0.5em;
   padding-bottom: 0;
 }
-#mobile {
-
-}
-
-.chartjs-render-monitor {
-  /*width: 450;*/
-}
 
 /* ======================================================================
                         SOCIAL STATS
 ========================================================================= */
 
 .social-h {
-  margin-top: 0;
-  margin-left: 2em;
+  margin: 0 auto;
+  margin-bottom: 1em;
 }
 .social-container {
+  width: calc(100% - 2em);
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  /*height: 7.5em;*/
+  flex-direction: column;
+  /*border-bottom: 1px solid black;*/
 
-  /*justify-content: stretch;*/
-  /*align-items: stretch;*/
-  justify-content: space-between;
   padding-bottom: 3em;
-  border-bottom: 1px solid black;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 .social {
   display: flex;
   flex-direction: row;
-  background-color: #e6e6e6;
   background-color: #f5f5f5;
-  width: 20%;
-  /*height: 100%;*/
-  /*height: 7.5em;*/
   align-self: center;
   padding: 1em;
   border: 1px solid black;
   border-radius: 5px;
-  margin-left: 2em;
-
-  width: calc(33% - 2em);
+  width: 100%;
 }
-.social:last-of-type {
-  margin-right: 2em;
+.social:not(:last-of-type) {
+  margin-bottom: 1em;
 }
 .social-background {
   width: 5.5em;
   height: 5.5em;
-  /*width: 2em;*/
-  /*height: 2em;*/
   padding: 1.5em;
   border-radius: 50%;
   background-color: #615fd0;
 
-  /*display: flex;*/
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 .social-background svg {
   display: flex;
   align-self: flex-start;
 }
-#twitter,
-#facebook,
-#google {
-  /*width: 40px;*/
-  /*height: 40px;*/
-}
-svg path {
-  /*width: 40px;*/
-  /*height: 40px;*/
-}
 .stats {
-  margin-left: 1.5em;
-  /*padding-bottom: 1em;*/
+  margin-left: 0.2em;
 }
 .stats h3 {
   color: #615fd0;
@@ -342,46 +302,40 @@ svg path {
 ========================================================================= */
 
 .members-activity {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 .members-container {
-  width: calc(50% - 2em);
-  border-right: 1px solid black;
-  padding-right: 2.5em;
-
-  width: 50%;
+  width: 100%;
+  /*border-right: 1px solid black;*/
 }
 .members-container h3,
 .message-container h3 {
+  text-align: center;
   margin-top: 1.5em;
-  margin-left: 2em;
 }
 .activity-container {
-  width: calc(50% - 2em);
-  padding-right: 2.5em;
-
-  width: 50%;
+  width: 100%;
+  /*padding-right: 2.5em;*/
 }
 .activity-container h3,
 .settings-container h3 {
-  margin-top: 1.5em;
-  margin-left: 2em;
-  margin-right: 2em;
+  text-align: center;
+  margin-top: 0.5em;
 }
 .member {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  margin-left: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   padding-bottom: 1em;
   margin-bottom: 1em;
-
-  /*border-bottom: 1px solid black;*/
 }
 .member:not(:last-of-type) {
   border-bottom: 1px solid black;
@@ -394,7 +348,7 @@ svg path {
 .member div {
   display: flex;
   flex-direction: column;
-  margin-left: 0.5em;
+  /*margin-left: 0.5em;*/
 }
 .member h3 {
   font-size: 0.9em;
@@ -410,17 +364,17 @@ svg path {
   margin-top: 0.2em;
 }
 .arrow,
-.join-date {
-  margin-left: auto;
+.join-date,
+.time {
+  align-self: center;
+  /*margin-left: auto;*/
   margin-top: 0.5em;
-}
-.member {
-  height: 56px;
 }
 .arrow {
   color: #615fd0;
-  align-self: flex-end;
+  /*align-self: flex-end;*/
   font-size: 2.5em;
+  margin-top: 0;
 }
 
 /* ======================================================================
@@ -428,28 +382,33 @@ svg path {
 ========================================================================= */
 
 .message-settings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
   margin-bottom: 3em;
+
+  justify-content: center;
+  align-items: center;
 }
 #settings-h {
+  text-align: center;
   margin-bottom: 1.5em;
-  margin-left: 1.75em;
+  /*margin-left: 1.75em;*/
 }
 .message-container {
-  width: calc(50% - 2em);
-  border-right: 1px solid black;
-  padding-right: 2.5em;
+  width: 100%;
+  /*width: calc(50% - 2em);*/
+  /*border-right: 1px solid black;*/
+  /*padding-right: 2.5em;*/
 
-  width: 50%;
+  /*width: 50%;*/
 }
 /* MESSAGE SEARCH BAR */
 #user-search {
-  width: 100%;
+  /*width: 100%;*/
   margin: 1em;
-  margin-left: 2.3em;
+  /*margin-left: 2.3em;*/
 }
 #userSearch {
   font-size: 1em;
@@ -463,21 +422,20 @@ svg path {
   border: 2px solid lightgray;
 
   background-color: #f5f5f5;
-  padding: 1.5em 1em;
   padding: 1em;
-  /*margin-right: 2.3em;*/
 }
 #userSearch:focus::placeholder {
   visibility: hidden;
 }
 #message {
-  width: 100%;
-  margin: 1em;
-  margin-left: 2.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 #message-area {
-  width: 100%;
-  max-width: 33.188em;
+  display: flex;
+  margin: 0 auto;
   height: 7.5em;
   border-radius: 5px;
   outline: none;
@@ -485,18 +443,17 @@ svg path {
   border: 2px solid lightgray;
 
   background-color: #f5f5f5;
-  padding: 1em;
-  margin-right: 2.3em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 #message-area:focus::placeholder {
   visibility: hidden;
 }
 /* SEND BUTTON */
 #send {
-  width: 100%;
+  width: calc(100% - 1em);
   height: 3.125em;
-  max-width: 33.188em;
-  text-align: center;
   font-size: 1em;
   font-weight: bold;
   color: white;
@@ -504,35 +461,32 @@ svg path {
   border-radius: 5px;
   outline: none;
   border: none;
-
   background-color: #615fd0;
 
-  padding: 1.5em 1em;
   padding: 1em;
-  margin: 1em;
-  margin-left: 2.3em;
-  margin-bottom: 2.5em;
+  margin: 1em 0.5em;
 }
 /* SETTINGS */
 .settings-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: calc(50% - 2em);
-  padding-right: 2.5em;
-
-  width: 50%;
 }
 .settings-container div {
-  margin-left: 2em;
+  /*margin-left: 2em;*/
 }
 .settings-container div h3 {
   margin: 0;
+  margin-bottom: 0.5em;
   width: 12em;
 }
 .settings {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 2em;
+
+  justify-content: center;
+  align-items: center;
 }
 
 /* TESTING OFF AND OFF BUTTONS */
@@ -584,11 +538,10 @@ svg path {
 }
 
 /* TIMEZONE DROPDOWN */
-
 .timezone-container {
-  width: 100%;
-  margin: 1em;
-  margin-left: 2.3em;
+  width: calc(100% - 2em);
+  margin: 0 1em;
+  margin-bottom: 1em;
 }
 #timezone {
   opacity: 0.5;
@@ -601,7 +554,6 @@ svg path {
   border: 2px solid lightgray;
 
   background-color: #f5f5f5;
-  padding: 1.5em 1em;
   padding: 1em;
 }
 
@@ -609,41 +561,29 @@ svg path {
 
 .save-cancel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #save,
 #cancel {
-  width: 47%;
+  width: 75%;
   height: 3.125em;
-  max-width: 33.188em;
-  text-align: center;
   font-size: 1em;
   font-weight: bold;
   color: white;
-
   border-radius: 5px;
   outline: none;
   border: none;
-
   background-color: #615fd0;
 
-  padding: 1.5em 1em;
   padding: 1em;
   margin-top: 0.5em;
-  /*margin-left: 2.3em;*/
-  /*margin-right: 1em;*/
-  margin-bottom: 2.5em;
-}
-#save {
-
+  margin-bottom: 1em;
 }
 #cancel {
   background-color: #969696;
 }
-
-
-
 
 /* ======================================================================
                         SVG STYLES
@@ -658,6 +598,579 @@ svg {
 ========================================================================= */
 
 @media (min-width: 768px) {
+
+  /* 768+ MAKING CHANGES - MOBILE FIRST */
+
+  /* ======================================================================
+                          HEADER
+  ========================================================================= */
+
+  body {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    height: 4.5em;
+    background-color: #615fd0;
+  }
+
+  h1 {
+    font-weight: 400;
+    color: white;
+  }
+
+  .app-name {
+    align-self: center;
+    font-size: 1em;
+
+    margin-right: 3em;
+    margin-left: 1em;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: white;
+  }
+
+  #svg-bell {
+    align-self: center;
+  }
+
+  .user-div {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 2.75em;
+
+    border-left: 2px solid #464499;
+
+    padding-left: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  .user-picture {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+    margin-top: 0.35em;
+  }
+
+  .username {
+    align-self: center;
+    font-size: 1em;
+    color: white;
+    font-weight: 400;
+    margin-right: 0;
+  }
+
+  /* ======================================================================
+                          NAVIGATION - SIDE
+  ========================================================================= */
+
+  .content nav {
+    width: 4.5em;
+  }
+
+  .nav-side {
+    width: 4.5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: #4e4d82;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+  }
+
+  .nav-side li {
+    list-style: none;
+    padding-top: 2em;
+  }
+  .nav-side li:last-of-type {
+    padding-bottom: 2em;
+  }
+
+  /* ======================================================================
+                          MAIN
+  ========================================================================= */
+
+  #dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #e6e6e6;
+  }
+  #dashboard-h {
+    padding: 0.5em;
+    background-color: white;
+  }
+  #dashboard-h h3 {
+    margin: 0;
+    color: #575555;
+  }
+  #dashboard-search {
+    margin: 1em;
+  }
+  #searchBar {
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 2px solid lightgray;
+    padding: 0.5em;
+  }
+  #searchBar:focus::placeholder {
+    visibility: hidden;
+  }
+
+
+  main, nav {
+    display: flex;
+    margin-right: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    width: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    margin: 0;
+    /* NEW TEST */
+    width: calc(100% - 4.5em);
+  }
+
+  .alert-highlight {
+    font-weight: bold;
+    margin-right: 0.75em;
+  }
+
+  .alert {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 2em);
+    font-size: 0.9em;
+    opacity: 0.85;
+    color: white;
+    background-color: #615fd0;
+    border-radius: 5px;
+
+    padding: 0.75em;
+    margin: 1em;
+  }
+
+  .alert-close {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+
+    padding-left: 0.25em;
+    margin-left: auto;
+  }
+
+  /* ======================================================================
+                          CHARTS
+  ========================================================================= */
+
+  .traffic-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: calc(100% - 2em);
+  }
+
+  .dm-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .daily-container {
+    width: 100%;
+    height: 20em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  .mobile-container {
+    width: 100%;
+    height: 20em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0;
+  }
+
+  /* ======================================================================
+                          SOCIAL STATS
+  ========================================================================= */
+
+  .social-h {
+    margin-top: 0;
+    margin-left: 2em;
+  }
+  .social-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 3em;
+    border-bottom: 1px solid black;
+  }
+  .social {
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    width: 20%;
+    align-self: center;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 2em;
+
+    width: calc(33% - 2em);
+  }
+  .social:last-of-type {
+    margin-right: 2em;
+  }
+  .social-background {
+    width: 5.5em;
+    height: 5.5em;
+    padding: 1.5em;
+    border-radius: 50%;
+    background-color: #615fd0;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .social-background svg {
+    display: flex;
+    align-self: flex-start;
+  }
+  .stats {
+    margin-left: 1.5em;
+  }
+  .stats h3 {
+    color: #615fd0;
+    margin: 0;
+  }
+  .stats span {
+    font-size: 3em;
+  }
+
+  /* ======================================================================
+                          NEW MEMBERS AND RECENT ACTIVITY
+  ========================================================================= */
+
+  .members-activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    border-bottom: 1px solid black;
+  }
+  .members-container {
+    width: calc(50% - 2em);
+    border-right: 1px solid black;
+    padding-right: 2.5em;
+
+    width: 50%;
+  }
+  .members-container h3,
+  .message-container h3 {
+    margin-top: 1.5em;
+    margin-left: 2em;
+  }
+  .activity-container {
+    width: calc(50% - 2em);
+    padding-right: 2.5em;
+
+    width: 50%;
+  }
+  .activity-container h3,
+  .settings-container h3 {
+    margin-top: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .member {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+
+  }
+  .member:not(:last-of-type) {
+    border-bottom: 1px solid black;
+  }
+  .member-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .member div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em;
+  }
+  .member h3 {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .member a {
+    color: #615fd0;
+    font-size: 0.85em;
+    text-decoration: none;
+  }
+  .member a,
+  .time {
+    margin-top: 0.2em;
+  }
+  .arrow,
+  .join-date {
+    margin-left: auto;
+    margin-top: 0.5em;
+  }
+  .member {
+    height: 56px;
+  }
+  .arrow {
+    color: #615fd0;
+    align-self: flex-end;
+    font-size: 2.5em;
+  }
+
+  /* ======================================================================
+                          MESSAGE USER AND SETTINGS
+  ========================================================================= */
+
+  .message-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  #settings-h {
+    margin-bottom: 1.5em;
+    margin-left: 1.75em;
+  }
+  .message-container {
+    width: calc(50% - 2em);
+    border-right: 1px solid black;
+    padding-right: 2.5em;
+
+    width: 50%;
+  }
+  /* MESSAGE SEARCH BAR */
+  #user-search {
+    width: 100%;
+    margin: 1em;
+    margin-left: 2.3em;
+  }
+  #userSearch {
+    font-size: 1em;
+
+    width: 100%;
+    max-width: 33.188em;
+    height: 2.6em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 2px solid lightgray;
+
+    background-color: #f5f5f5;
+    padding: 1em;
+  }
+  #userSearch:focus::placeholder {
+    visibility: hidden;
+  }
+  #message {
+    width: 100%;
+    margin: 1em;
+    margin-left: 2.3em;
+  }
+  #message-area {
+    width: 100%;
+    max-width: 33.188em;
+    height: 7.5em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 2px solid lightgray;
+
+    background-color: #f5f5f5;
+    padding: 1em;
+    margin-right: 2.3em;
+  }
+  #message-area:focus::placeholder {
+    visibility: hidden;
+  }
+  /* SEND BUTTON */
+  #send {
+    width: 100%;
+    height: 3.125em;
+    max-width: 33.188em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+    background-color: #615fd0;
+
+    padding: 1em;
+    margin: 1em;
+    margin-left: 2.3em;
+    margin-bottom: 2.5em;
+  }
+  /* SETTINGS */
+  .settings-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 2em);
+    padding-right: 2.5em;
+
+    width: 50%;
+  }
+  .settings-container div {
+    margin-left: 2em;
+  }
+  .settings-container div h3 {
+    margin: 0;
+    width: 12em;
+  }
+  .settings {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+
+  /* TESTING OFF AND OFF BUTTONS */
+
+  .onoffswitch {
+      position: relative; width: 90px;
+      -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  }
+  .onoffswitch-checkbox {
+      display: none;
+  }
+  .onoffswitch-label {
+      display: block; overflow: hidden; cursor: pointer;
+      border: 2px solid #999999; border-radius: 20px;
+  }
+  .onoffswitch-inner {
+      display: block; width: 200%; margin-left: -100%;
+      transition: margin 0.3s ease-in 0s;
+  }
+  .onoffswitch-inner:before, .onoffswitch-inner:after {
+      display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+      font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+      box-sizing: border-box;
+  }
+  .onoffswitch-inner:before {
+      content: "ON";
+      padding-left: 10px;
+      background-color: #615fd0; color: #FFFFFF;
+  }
+  .onoffswitch-inner:after {
+      content: "OFF";
+      padding-right: 10px;
+      background-color: #EEEEEE; color: #999999;
+      text-align: right;
+  }
+  .onoffswitch-switch {
+      display: block; width: 18px; margin: 6px;
+      background: #FFFFFF;
+      position: absolute; top: 0; bottom: 0;
+      right: 56px;
+      border: 2px solid #999999; border-radius: 20px;
+      transition: all 0.3s ease-in 0s;
+  }
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+      margin-left: 0;
+  }
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+      right: 0px;
+  }
+
+  /* TIMEZONE DROPDOWN */
+
+  .timezone-container {
+    width: 100%;
+    margin: 1em;
+    margin-left: 2.3em;
+  }
+  #timezone {
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    max-width: 33.188em;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid lightgray;
+
+    background-color: #f5f5f5;
+    padding: 1em;
+  }
+
+  /* SAVE AND CANCEL BUTTONS */
+
+  .save-cancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #save,
+  #cancel {
+    width: 47%;
+    height: 3.125em;
+    max-width: 33.188em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+    background-color: #615fd0;
+
+    padding: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 2.5em;
+  }
+  #cancel {
+    background-color: #969696;
+  }
+
+  /* >>>>> FOR 768 CHANGES DONE BEFORE ADJUSTING */
 
   .app-name {
     font-size: 1.5em;
@@ -674,9 +1187,7 @@ svg {
   }
 
   #dashboard {
-    /*display: flex;*/
     flex-direction: row;
-    /*width: 100%;*/
   }
   #dashboard-h {
     display: flex;
@@ -694,24 +1205,16 @@ svg {
     height: 2.5em;
     padding: 0.75em;
   }
-  #searchBar::placeholder {
-    /*padding: 0.75em;*/
-  }
 
   .alert {
     width: calc(100% - 3em);
     margin: 1.5em;
   }
 
-
-
   .dm-container {
     display: flex;
     flex-direction: row;
-    /*width: calc(100% - 2em);*/
     width: 100%;
-
-    height: 80vh;
     height: 20em;
 
     border-top: 1px solid black;
@@ -726,10 +1229,6 @@ svg {
     padding-right: 2em;
     padding-top: 1em;
     padding-bottom: 2em;
-  }
-  #daily {
-    /*width: 100%;*/
-    /*width: 400px;*/
   }
   .mobile-container {
     width: 45%;
