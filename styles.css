@@ -609,6 +609,13 @@ main {
 svg {
   fill: white;
 }
+.nav-side svg:not([class="active"]) {
+  fill: #a5a5a8;
+}
+
+#svg-dashboard:not(:first-child) {
+  fill: #a5a5a8;
+}
 
 /* ======================================================================
                         TABLET 768px
