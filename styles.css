@@ -72,6 +72,23 @@ h1 {
   margin-right: 0;
 }
 
+#bell-container {
+  display: flex;
+  margin: auto 0;
+  padding-right: 0.5em;
+}
+#bell-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #36ff3e;
+  margin-left: 1.25em;
+  margin-top: -0.3em;
+}
+
 /* ======================================================================
                         NAVIGATION - SIDE
 ========================================================================= */
