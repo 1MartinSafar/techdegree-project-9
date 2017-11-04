@@ -531,24 +531,51 @@ let canvas_container = document.querySelector(".traffic-container");
 let charts_names = document.querySelector(".charts");
 let charts = document.querySelectorAll(".charts h3");
 
+let canvas_all = document.querySelectorAll(".traffic-container canvas");
+
 
 charts_names.addEventListener('click', function(event) {
   let clicked = event.target
-  // console.log(clicked);
-  // console.log(clicked.tagName);
   if (clicked.tagName === "H3") {
 
     for (let i = 0; i < charts.length; i++) {
       if (charts[i] === clicked) {
         clicked.style.color = "white";
         clicked.style.backgroundColor = "#48d979";
+        console.log(clicked.textContent)
+
+        switch (clicked.textContent) {
+          case "Hourly":
+            canvas_hourly.style.display = "block";
+            canvas_daily.style.display = "none";
+            canvas_weekly.style.display = "none";
+            canvas_monthly.style.display = "none";
+            break;
+          case "Daily":
+            canvas_hourly.style.display = "none";
+            canvas_daily.style.display = "block";
+            canvas_weekly.style.display = "none";
+            canvas_monthly.style.display = "none";
+            break;
+          case "Weekly":
+            canvas_hourly.style.display = "none";
+            canvas_daily.style.display = "none";
+            canvas_weekly.style.display = "block";
+            canvas_monthly.style.display = "none";
+            break;
+          case "Monthly":
+            canvas_hourly.style.display = "none";
+            canvas_daily.style.display = "none";
+            canvas_weekly.style.display = "none";
+            canvas_monthly.style.display = "block";
+            break;
+        }
       }
       else {
         charts[i].style.color = "black";
         charts[i].style.backgroundColor = "white";
       }
     }
-
   }
 });
 
