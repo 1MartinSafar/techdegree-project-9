@@ -102,7 +102,6 @@ timezone.addEventListener("click", function() {
                         CHARTS
 ========================================================================= */
 
-
 // SAMPLE
 
 // var ctx = document.getElementById("myChart");
@@ -146,15 +145,26 @@ timezone.addEventListener("click", function() {
 /* ======================================================================
                         TRAFFIC LINE CHART
 ========================================================================= */
+// let canvas_hourly = document.querySelector("#hourly");
+// let canvas_daily = document.querySelector("#daily");
+// let canvas_weekly = document.querySelector("#weekly");
+// let canvas_monthly = document.querySelector("#monthly");
+//
+// console.log(canvas_hourly);
+//
+// canvas_hourly.style.display = "none";
+// canvas_daily.style.display = "none";
+// canvas_weekly.style.display = "none";
+// canvas_monthly.style.display = "none";
 
-var canvas_traffic = document.querySelector("#traffic");
-var traffic = new Chart(canvas_traffic, {
+let canvas_hourly = document.querySelector("#hourly");
+let hourly = new Chart(canvas_hourly, {
   type: 'line',
   data: {
     // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
     datasets: [{
-      label: 'traffic',
+      label: 'Hourly',
       // backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
       // borderJoinStyle: "round",
@@ -172,27 +182,14 @@ var traffic = new Chart(canvas_traffic, {
       // THESE ARE THE POINTS
       // data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
       data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
-    //   data: [{
-    //     x: 1,
-    //     y: 500
-    // }, {
-    //     x: 2,
-    //     y: 1000
-    // }, {
-    //     x: 3,
-    //     y: 750
-    // }]
-    //   data: {
-    //     [1 500]
-    //   }
-    }]
+  }]
   },
   options: {
     tooltips: {
       //
     },
     legend: {
-            display: false,
+            // display: false,
             labels: {
                 fontColor: 'rgb(255, 99, 132)'
             }
@@ -230,7 +227,7 @@ var traffic = new Chart(canvas_traffic, {
         labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
         stepSize: 0.5,
         ticks: {
-          labelOffset: -50,
+          // labelOffset: -50,
           // min: 0,
           // max: 2500,
           // stepSize: 500
@@ -251,12 +248,328 @@ var traffic = new Chart(canvas_traffic, {
   }
 });
 
+let canvas_daily = document.querySelector("#daily");
+let daily = new Chart(canvas_daily, {
+  type: 'line',
+  data: {
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+    datasets: [{
+      label: 'Daily',
+      // backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      // borderJoinStyle: "round",
+      // cubicInterpolationMode: false,
+      lineTension: 0,
+      // borderCapStyle: "square",
+      // borderJoinStyle:
+      // showLine: false,
+      pointRadius: 7.5,
+      pointBorderWidth: 2.5,
+      pointBackgroundColor: "white",
+      pointBorderColor: "#615fd0",
+      borderColor: "rgba(97, 95, 208, 0.6)",
+      backgroundColor: "rgba(97, 95, 208, 0.2)",
+      // THESE ARE THE POINTS
+      // data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+      data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+  }]
+  },
+  options: {
+    tooltips: {
+      //
+    },
+    legend: {
+            // display: false,
+            labels: {
+                fontColor: 'rgb(255, 99, 132)'
+            }
+        },
+    title: {
+        display: true,
+        text: 'TRAFFIC',
+        fontSize: 16,
+        // xPadding: 10,
+        // yPadding: 10
+      },
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        ticks: {
+          labelOffset: 0,
+          // min: 0,
+          max: 2500,
+          // stepSize: 500
+          // min: 0
+          beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }],
+      xAxes: [{
+        type: 'category',
+        labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+        stepSize: 0.5,
+        ticks: {
+          // labelOffset: -50,
+          // min: 0,
+          // max: 2500,
+          // stepSize: 500
+          // min: 0
+          // beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }]
+    }
+  }
+});
+
+let canvas_weekly = document.querySelector("#weekly");
+let weekly = new Chart(canvas_weekly, {
+  type: 'line',
+  data: {
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+    datasets: [{
+      label: 'Weekly',
+      // backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      // borderJoinStyle: "round",
+      // cubicInterpolationMode: false,
+      lineTension: 0,
+      // borderCapStyle: "square",
+      // borderJoinStyle:
+      // showLine: false,
+      pointRadius: 7.5,
+      pointBorderWidth: 2.5,
+      pointBackgroundColor: "white",
+      pointBorderColor: "#615fd0",
+      borderColor: "rgba(97, 95, 208, 0.6)",
+      backgroundColor: "rgba(97, 95, 208, 0.2)",
+      // THESE ARE THE POINTS
+      // data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+      data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+  }]
+  },
+  options: {
+    tooltips: {
+      //
+    },
+    legend: {
+            // display: false,
+            labels: {
+                fontColor: 'rgb(255, 99, 132)'
+            }
+        },
+    title: {
+        display: true,
+        text: 'TRAFFIC',
+        fontSize: 16,
+        // xPadding: 10,
+        // yPadding: 10
+      },
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        ticks: {
+          labelOffset: 0,
+          // min: 0,
+          max: 2500,
+          // stepSize: 500
+          // min: 0
+          beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }],
+      xAxes: [{
+        type: 'category',
+        labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+        stepSize: 0.5,
+        ticks: {
+          // labelOffset: -50,
+          // min: 0,
+          // max: 2500,
+          // stepSize: 500
+          // min: 0
+          // beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }]
+    }
+  }
+});
+
+let canvas_monthly = document.querySelector("#monthly");
+let monthly = new Chart(canvas_monthly, {
+  type: 'line',
+  data: {
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+    datasets: [{
+      label: 'Monthly',
+      // backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      // borderJoinStyle: "round",
+      // cubicInterpolationMode: false,
+      lineTension: 0,
+      // borderCapStyle: "square",
+      // borderJoinStyle:
+      // showLine: false,
+      pointRadius: 7.5,
+      pointBorderWidth: 2.5,
+      pointBackgroundColor: "white",
+      pointBorderColor: "#615fd0",
+      borderColor: "rgba(97, 95, 208, 0.6)",
+      backgroundColor: "rgba(97, 95, 208, 0.2)",
+      // THESE ARE THE POINTS
+      // data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+      data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
+  }]
+  },
+  options: {
+    tooltips: {
+      //
+    },
+    legend: {
+            // display: false,
+            labels: {
+                fontColor: 'rgb(255, 99, 132)'
+            }
+        },
+    title: {
+        display: true,
+        text: 'TRAFFIC',
+        fontSize: 16,
+        // xPadding: 10,
+        // yPadding: 10
+      },
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        ticks: {
+          labelOffset: 0,
+          // min: 0,
+          max: 2500,
+          // stepSize: 500
+          // min: 0
+          beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }],
+      xAxes: [{
+        type: 'category',
+        labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
+        stepSize: 0.5,
+        ticks: {
+          // labelOffset: -50,
+          // min: 0,
+          // max: 2500,
+          // stepSize: 500
+          // min: 0
+          // beginAtZero:true
+          // stepSize: 500
+
+          // suggestedMin: 500,
+          // suggestedMax: 2500,
+
+          // scaleSteps: 500
+          // scaleStepWidth : 500,
+          // scaleStartValue : 500
+        },
+        // stacked: true,
+      }]
+    }
+  }
+});
+
+// >>>>> SHOWING AND HIDING TRAFFIC CHARTS
+canvas_hourly.style.display = "block";
+canvas_daily.style.display = "none";
+canvas_weekly.style.display = "none";
+canvas_monthly.style.display = "none";
+
+let canvas_container = document.querySelector(".traffic-container");
+let charts_names = document.querySelector(".charts");
+let charts = document.querySelectorAll(".charts h3");
+
+
+charts_names.addEventListener('click', function(event) {
+  let clicked = event.target
+  // console.log(clicked);
+  // console.log(clicked.tagName);
+  if (clicked.tagName === "H3") {
+
+    for (let i = 0; i < charts.length; i++) {
+      if (charts[i] === clicked) {
+        clicked.style.color = "white";
+        clicked.style.backgroundColor = "#48d979";
+      }
+      else {
+        charts[i].style.color = "black";
+        charts[i].style.backgroundColor = "white";
+      }
+    }
+
+  }
+});
+
+canvas_container.addEventListener('click', function() {
+  // if (this.tagName === "h3") {
+  //   this.style.color = "white";
+  //   this.style.backgroundColor = "#48d979";
+  // }
+});
+
+// .charts h3:hover {
+//   color: white;
+//   background-color: #48d979;
+// }
+
 /* ======================================================================
                         DAILY BAR CHART
 ========================================================================= */
 
-var canvas_daily = document.querySelector("#daily");
-var daily = new Chart(canvas_daily, {
+var canvas_daily_bar = document.querySelector("#daily_bar");
+var daily_bar = new Chart(canvas_daily_bar, {
   type: 'bar',
   // barPercentage: '0.4',
   data: {

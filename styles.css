@@ -218,6 +218,25 @@ main {
                         CHARTS
 ========================================================================= */
 
+.charts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.charts h3 {
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  margin-left: 1em;
+  border-radius: 20px;
+}
+.charts h3:hover {
+  color: white;
+  background-color: #48d979;
+}
+
 .traffic-container {
   /*position: relative;*/
   /*margin: auto;*/
