@@ -1,14 +1,127 @@
-// Hide the Alert Notification on click
+/* ======================================================================
+                        SCRIPTS
+========================================================================= */
 
+// Hide the Alert Notification on click
 const alert = document.querySelector(".alert");
 const alert_close = document.querySelector(".alert-close");
 
-console.log(alert);
-console.log(alert_close);
+const send = document.querySelector("#send");
+
+const bell = document.querySelector("#bell-container");
+
+// console.log(alert);
+// console.log(alert_close);
+// console.log(send);
 
 alert_close.addEventListener("click", function() {
   alert.style.display = "none";
 });
+
+send.addEventListener("click", function() {
+  const user = document.querySelector("#userSearch").value;
+  const message = document.querySelector("#message-area").value;
+  console.log(user);
+  console.log(message);
+  if (user === "") {
+    console.log(user);
+    window.alert("ERROR! User isn't selected!");
+  }
+  else if (message === "") {
+    console.log(message);
+    window.alert("ERROR! Message field is empty!");
+  }
+  else {
+    console.log("SUBMITTED!");
+    window.alert("Success! Your message has been sent!");
+  }
+});
+
+bell.addEventListener("click", function() {
+  window.alert("New members have joined! Check them out in the >Members< tab");
+  window.alert("New features have been added to the >Settings< tab");
+});
+
+/* ======================================================================
+                        SAVING SETTINGS
+========================================================================= */
+
+let settings1 = document.querySelector("#myonoffswitch1");
+let settings2 = document.querySelector("#myonoffswitch2");
+let timezone = document.querySelector("#timezone");
+
+// console.log(settings1);
+// console.log(settings2);
+// console.log("SETTINGS1 CHECKED IS CURRENTLY: ");
+// console.log(settings1.checked);
+// console.log("SETTINGS2 CHECKED IS CURRENTLY: ");
+// console.log(settings2.checked);
+
+if (sessionStorage.getItem('onoff1') !== null) {
+  if (sessionStorage.getItem('onoff1') === "true") {
+    // console.log(">>>>> TRUE");
+    settings1.checked = true;
+  } else {
+    // console.log(">>>>> FALSE");
+    settings1.checked = false;
+  }
+} else {
+  // console.log(">>>>> NULL");
+}
+
+if (sessionStorage.getItem('onoff2') !== null) {
+  if (sessionStorage.getItem('onoff2') === "true") {
+    // console.log(">>>>> TRUE");
+    settings2.checked = true;
+  } else {
+    // console.log(">>>>> FALSE");
+    settings2.checked = false;
+  }
+} else {
+  // console.log(">>>>> NULL");
+}
+
+settings1.addEventListener("click", function() {
+  let current1 = settings1.checked;
+  sessionStorage.setItem('onoff1', current1);
+});
+
+settings2.addEventListener("click", function() {
+  let current2 = settings2.checked;
+  sessionStorage.setItem('onoff2', current2);
+});
+
+
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null
+  } catch(e) {
+    return false;
+  }
+}
+
+// $(function () {
+//     var data = localStorage.getItem("onoff1");
+//
+//     if (data !== null) {
+//         $("input[name='onoffswitch1']").attr("checked", "checked");
+//     }
+// });
+//
+// $("input[name='onoffswitch1']").click(function () {
+//
+//     if ($(this).is(":checked")) {
+//         localStorage.setItem("onoff1", $(this).val());
+//     } else {
+//         localStorage.removeItem("onoff1");
+//     }
+// });
+
+
+/* ======================================================================
+                        CHARTS
+========================================================================= */
+
 
 // SAMPLE
 
