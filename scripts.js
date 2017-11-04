@@ -5,9 +5,7 @@
 // Hide the Alert Notification on click
 const alert = document.querySelector(".alert");
 const alert_close = document.querySelector(".alert-close");
-
 const send = document.querySelector("#send");
-
 const bell = document.querySelector("#bell-container");
 
 // console.log(alert);
@@ -21,18 +19,18 @@ alert_close.addEventListener("click", function() {
 send.addEventListener("click", function() {
   const user = document.querySelector("#userSearch").value;
   const message = document.querySelector("#message-area").value;
-  console.log(user);
-  console.log(message);
+  // console.log(user);
+  // console.log(message);
   if (user === "") {
-    console.log(user);
+    // console.log(user);
     window.alert("ERROR! User isn't selected!");
   }
   else if (message === "") {
-    console.log(message);
+    // console.log(message);
     window.alert("ERROR! Message field is empty!");
   }
   else {
-    console.log("SUBMITTED!");
+    // console.log("SUBMITTED!");
     window.alert("Success! Your message has been sent!");
   }
 });
@@ -91,32 +89,13 @@ settings2.addEventListener("click", function() {
   sessionStorage.setItem('onoff2', current2);
 });
 
-
-function supportsLocalStorage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null
-  } catch(e) {
-    return false;
-  }
+if (sessionStorage.getItem('selected')) {
+  $('#timezone').val(sessionStorage.getItem('selected'));
 }
 
-// $(function () {
-//     var data = localStorage.getItem("onoff1");
-//
-//     if (data !== null) {
-//         $("input[name='onoffswitch1']").attr("checked", "checked");
-//     }
-// });
-//
-// $("input[name='onoffswitch1']").click(function () {
-//
-//     if ($(this).is(":checked")) {
-//         localStorage.setItem("onoff1", $(this).val());
-//     } else {
-//         localStorage.removeItem("onoff1");
-//     }
-// });
-
+timezone.addEventListener("click", function() {
+  sessionStorage.setItem('selected', this.value);
+});
 
 /* ======================================================================
                         CHARTS
