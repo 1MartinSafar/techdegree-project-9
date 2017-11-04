@@ -145,104 +145,45 @@ timezone.addEventListener("click", function() {
 /* ======================================================================
                         TRAFFIC LINE CHART
 ========================================================================= */
-// let canvas_hourly = document.querySelector("#hourly");
-// let canvas_daily = document.querySelector("#daily");
-// let canvas_weekly = document.querySelector("#weekly");
-// let canvas_monthly = document.querySelector("#monthly");
-//
-// console.log(canvas_hourly);
-//
-// canvas_hourly.style.display = "none";
-// canvas_daily.style.display = "none";
-// canvas_weekly.style.display = "none";
-// canvas_monthly.style.display = "none";
-
 let canvas_hourly = document.querySelector("#hourly");
 let hourly = new Chart(canvas_hourly, {
   type: 'line',
   data: {
-    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
-    // labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
     datasets: [{
       label: 'Hourly',
-      // backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      // borderJoinStyle: "round",
-      // cubicInterpolationMode: false,
       lineTension: 0,
-      // borderCapStyle: "square",
-      // borderJoinStyle:
-      // showLine: false,
       pointRadius: 7.5,
       pointBorderWidth: 2.5,
       pointBackgroundColor: "white",
       pointBorderColor: "#615fd0",
       borderColor: "rgba(97, 95, 208, 0.6)",
       backgroundColor: "rgba(97, 95, 208, 0.2)",
-      // THESE ARE THE POINTS
-      // data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
       data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
   }]
   },
   options: {
-    tooltips: {
-      //
-    },
     legend: {
-            // display: false,
-            labels: {
-                fontColor: 'rgb(255, 99, 132)'
-            }
+            display: false,
         },
     title: {
         display: true,
         text: 'TRAFFIC',
         fontSize: 16,
-        // xPadding: 10,
-        // yPadding: 10
       },
     maintainAspectRatio: false,
     scales: {
       yAxes: [{
         ticks: {
           labelOffset: 0,
-          // min: 0,
           max: 2500,
-          // stepSize: 500
-          // min: 0
           beginAtZero:true
-          // stepSize: 500
-
-          // suggestedMin: 500,
-          // suggestedMax: 2500,
-
-          // scaleSteps: 500
-          // scaleStepWidth : 500,
-          // scaleStartValue : 500
-        },
-        // stacked: true,
+        }
       }],
       xAxes: [{
         type: 'category',
         labels: ["", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31", ""],
         stepSize: 0.5,
-        ticks: {
-          // labelOffset: -50,
-          // min: 0,
-          // max: 2500,
-          // stepSize: 500
-          // min: 0
-          // beginAtZero:true
-          // stepSize: 500
-
-          // suggestedMin: 500,
-          // suggestedMax: 2500,
-
-          // scaleSteps: 500
-          // scaleStepWidth : 500,
-          // scaleStartValue : 500
-        },
-        // stacked: true,
       }]
     }
   }
@@ -532,6 +473,9 @@ let charts_names = document.querySelector(".charts");
 let charts = document.querySelectorAll(".charts h3");
 
 let canvas_all = document.querySelectorAll(".traffic-container canvas");
+
+charts[0].style.color = "white";
+charts[0].style.backgroundColor = "#48d979";
 
 
 charts_names.addEventListener('click', function(event) {
