@@ -257,7 +257,7 @@ main {
   padding-left: 0.5em;
   padding-right: 0.5em;
 
-  margin-bottom: 5em;
+  margin-bottom: 10em;
 
 }
 
@@ -716,6 +716,10 @@ svg {
   }
   .charts h3:last-of-type {
     margin-bottom: 1em;
+  }
+
+  .traffic-container {
+    margin-bottom: 5em;
   }
 
   .mobile-container {
