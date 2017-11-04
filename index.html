@@ -5,7 +5,9 @@
     <title>Web App Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="awesomplete.css" />
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="awesomplete.css" /> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
   </head>
   <body>
@@ -233,8 +235,7 @@
 
               <div id="user-search">
                 <form action="scripts.js">
-                  <input type="search" placeholder="Search for User" id="userSearch">
-                </form>
+                  <input type="search" placeholder="Search for User" id="userSearch" class="awesomplete">
               </div>
 
               <div id="message">
@@ -309,7 +310,25 @@
   </script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+  <script type="text/javascript" src="awesomplete.js"></script>
   <script src="scripts.js"></script>
+  <script type="text/javascript">
+    let input = document.getElementById("userSearch");
+    let awesomplete = new Awesomplete(input, {
+      minChars: 1,
+      list: [
+      "victor chambers",
+      "dale byrd",
+      "dawn wood",
+      "dan oliver",
+      "taylor swift",
+      "ed sheeran",
+      "selena gomez",
+      "martin freeman",
+      "jimmy fallon"
+    ]
+    });
+  </script>
 
   </body>
 </html>

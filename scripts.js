@@ -16,7 +16,8 @@ alert_close.addEventListener("click", function() {
   alert.style.display = "none";
 });
 
-send.addEventListener("click", function() {
+send.addEventListener("click", function(event) {
+  event.preventDefault();
   const user = document.querySelector("#userSearch").value;
   const message = document.querySelector("#message-area").value;
   // console.log(user);
