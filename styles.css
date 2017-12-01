@@ -225,6 +225,7 @@ main {
 }
 
 .charts h3 {
+  cursor: pointer;
   align-self: center;
   border-radius: 20px;
 
@@ -503,6 +504,7 @@ main {
 }
 /* SEND BUTTON */
 #send {
+  cursor: pointer;
   width: calc(100% - 1em);
   height: 3.125em;
   font-size: 1em;
@@ -632,6 +634,7 @@ main {
 }
 #save,
 #cancel {
+  cursor: pointer;
   width: 75%;
   height: 3.125em;
   font-size: 1em;
